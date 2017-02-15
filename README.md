@@ -7,5 +7,6 @@ Script to export private key from existing keystore and signing it with new publ
 | :------------: | :---------: | :------------------------: |
 | `-srckeystore` |    YES      | Existing keystore          |
 | `-srcpasswd`   |    YES      | Existing keystore password |
+| `-hostname`    |    YES      | Server hostname            |
 | `-publiccer`   |    YES      | New public certificate     |
 
