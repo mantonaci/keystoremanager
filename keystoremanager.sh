@@ -2,6 +2,7 @@
 
 GREEN='\033[0;32m'
 LIGHT_BLUE='\033[1;34m'
+RED='\033[0;31m'
 NC='\033[0m'
 
 set -e
@@ -41,6 +42,12 @@ do
         ks_alias_privatekeyentry+=("${ks_alias[$i]}")
     fi
 done
+
+if [[ ${#ks_alias_privatekeyentry[@]} -eq 0 ]]
+then
+    echo -e "${RED}Sorry, not a valid keystore!!!${NC}"
+    exit 0;
+fi
 
 echo -e "\n${GREEN}Select alias in keystore: ${LIGHT_BLUE}$SRCKEYSTORE${NC}\n"
 for ((i=0; i<${#ks_alias_privatekeyentry[@]}; i++))
