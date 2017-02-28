@@ -1,5 +1,5 @@
 # Keystore Manager
-Script to export private key from existing keystore and signing it with new public certificate
+Script to export private key from existing keystore and signing the new public certificate with it
 
 ## Parameters
 
