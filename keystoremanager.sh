@@ -70,7 +70,7 @@ fi
 echo -e "${GREEN}\nExport private-key in: $HOSTNAME.key${NC}\n"
 openssl pkcs12 -in $HOSTNAME-keystore.p12 -nocerts -out $HOSTNAME.key
 
-echo -e "${GREEN}\nSigning private key with new public certificate in: ${LIGHT_CYAN}$HOSTNAME.p12${NC}\n"
+echo -e "${GREEN}\nSigning new public certificate with existing private key in: ${LIGHT_CYAN}$HOSTNAME.p12${NC}\n"
 openssl pkcs12 -export -in $PUBLICCER -inkey $HOSTNAME.key -out $HOSTNAME.p12
 
 echo -e "${GREEN}\nImport signed certificate in keystore with alias: ${LIGHT_CYAN}${ks_alias_privatekeyentry[$alias_choosed]}${NC}\n"
